@@ -50,6 +50,36 @@
 <pre id=info>pre</pre>
 <button onclick='onButtonClick()' class="button button-pill button-action button-large">button</button>
 
+
+
+
+<div class="content content-padded">
+
+<button class="btn btn-block" onclick="login()">Login with Facebook</button>
+<hr/>
+
+<button class="btn btn-block" onclick="getInfo()">Get My Info</button>
+<p>Name: <span id="userName"></span></p>
+<img id="userPic"/>
+<hr/>
+
+<textarea id="Message" placeholder="What's on your mind?" rows="5"></textarea>
+<button class="btn btn-block" onclick="share()">Share</button>
+<hr/>
+
+<p>Complete Facebook Logout. After logging out, you'll have to login again and provide your Facebook credentials.</p>
+<button class="btn btn-block" onclick="logout()">Logout</button>
+<hr/>
+
+<button class="btn btn-block" onclick="readPermissions()">Read Permissions</button>
+
+<p>Revoke App Permissions. After revoking permissions, you'll have to grant permissions again when logging in.</p>
+<button class="btn btn-block" onclick="revoke()">Revoke Permissions</button>
+
+</div>
+
+
+
 <div class="copyright">
     <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2015</span>
     <script src="openfb.js"></script>
