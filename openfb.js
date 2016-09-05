@@ -246,7 +246,7 @@ var openFB = (function () {
                 if (xhr.status === 200) {
                     if (obj.success) obj.success(JSON.parse(xhr.responseText));
                 } else {
-                    var error = xhr.responseText ? JSON.parse(xhr.responseText).error : {message: 'An error has occurred'};
+                    var error = xhr.responseText ? JSON.parse(xhr.responseText).error : {message: 'An error has occurred'+url+xhr.status};
                     if (obj.error) obj.error(error);
                 }
             }
