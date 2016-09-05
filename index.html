@@ -85,9 +85,9 @@
 
     <script>
          // Defaults to sessionStorage for storing the Facebook token
-         openFB.init({appId: '1120732278010623'});
+        // openFB.init({appId: '1120732278010623'});
         //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
-        //  openFB.init({appId: 'YOUR_FB_APP_ID', tokenStore: window.localStorage});
+          openFB.init({appId: '1120732278010623', tokenStore: window.localStorage});
         function login() {
             openFB.login(
                     function(response) {
@@ -107,7 +107,7 @@
                     document.getElementById("userName").innerHTML = data.name;
                     document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
                 },
-                error: errorHandler(data)});
+                error: errorHandler});
         }
         function share() {
             openFB.api({
