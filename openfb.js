@@ -242,6 +242,7 @@ var openFB = (function () {
         url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
+          document.getElementById("fburl").innerHTML = url;
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     if (obj.success) obj.success(JSON.parse(xhr.responseText));
