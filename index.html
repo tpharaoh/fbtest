@@ -77,7 +77,7 @@
 
 </div>
 
-<a id=fburl></a>
+<div id=fburl></div>
 
 <div class="copyright">
     <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2015</span>
@@ -97,18 +97,22 @@
                         } else {
                             alert('Facebook login failed: ' + response.error);
                         }
-                    }, {scope: 'email,user_birthday'});
+                    }, {scope: 'email'});
         }
         function getInfo() {
             openFB.api({
                 path: '/me',
+                params: {
+                  fields: 'id,name,first_name,last_name,age_range,link,gender,locale,picture,timezone,updated_time,verified,email'
+                },
                 success: function(data) {
 
-                    alert(JSON.stringify(data));
+                    //alert(JSON.stringify(data));
                     document.getElementById("userName").innerHTML = data.name;
                     document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
                 },
-                error: errorHandler});
+                error: errorHandler,
+              });
         }
         function share() {
             openFB.api({
