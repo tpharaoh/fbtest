@@ -239,7 +239,7 @@ var openFB = (function () {
 
         //params['access_token'] = 'EAAP7TNFRsv8BAJZCrgnSAbxO3ZBVNE7HAOHe5t39z08HxZCRz7yZCXZApCVP70gL8edu6BGIh8muZAB26xBykxD2IiM4LPoqNbrDiu64zOxvcYZCowPbCfQqiegJTmXOgOYKfl5NFfZCyZAyw74xfjDIQRzpT04ZA11wBTnX5ArJVdkAZDZD';
         params['access_token']=tokenStore.fbAccessToken;
-
+        alert(tokenStore.fbAccessToken);
         url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
 
         //url = 'https://graph.facebook.com/me?fields=id,name,email&' + toQueryString(params);
